@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "synthflux": {
+      "command": "node",
+      "args": ["./dist/index.js"],
+      "cwd": ".",
+      "env": {
+        "SYNTHFLUX_API_KEY": "${SYNTHFLUX_API_KEY:-}",
+        "SYNTHFLUX_BASE_URL": "${SYNTHFLUX_BASE_URL:-https://apihub.agnes-ai.com}",
+        "SYNTHFLUX_IMAGE_MODEL": "${SYNTHFLUX_IMAGE_MODEL:-agnes-image-2.1-flash}",
+        "SYNTHFLUX_TTS_MODEL": "${SYNTHFLUX_TTS_MODEL:-step-tts-2}",
+        "SYNTHFLUX_TTS_VOICE": "${SYNTHFLUX_TTS_VOICE:-lively-girl}",
+        "SYNTHFLUX_VIDEO_MODEL": "${SYNTHFLUX_VIDEO_MODEL:-agnes-video-v2.0}"
+      },
+      "default_tools_approval_mode": "approve"
+    }
+  }
+}

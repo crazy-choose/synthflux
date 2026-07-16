@@ -1,0 +1,29 @@
+{
+  "name": "synthflux",
+  "version": "0.1.0",
+  "description": "OpenAI-compatible media generation MCP server. One baseUrl + apiKey, image / TTS / video across Agnes, StepFun, or your own router backend.",
+  "author": {
+    "name": "SynthFlux",
+    "url": "https://github.com/synthflux-ai"
+  },
+  "homepage": "https://github.com/synthflux-ai/synthflux#readme",
+  "repository": "https://github.com/synthflux-ai/synthflux",
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "openai",
+    "image-generation",
+    "tts",
+    "video-generation",
+    "media",
+    "agnes",
+    "stepfun"
+  ],
+  "mcpServers": "./.codex-plugin/mcp.json",
+  "interface": {
+    "displayName": "SynthFlux",
+    "shortDescription": "OpenAI-compatible media generation (image / TTS / video)",
+    "developerName": "SynthFlux",
+    "category": "Media"
+  }
+}
