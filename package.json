@@ -1,7 +1,7 @@
 {
   "name": "synthflux",
   "version": "0.1.0",
-  "description": "SynthFlux MCP server — OpenAI-compatible media generation gateway (image / TTS / video). One baseUrl + apiKey, router backend decides upstream.",
+  "description": "SynthFlux MCP server \u2014 OpenAI-compatible media generation gateway (image / TTS / video). One baseUrl + apiKey, router backend decides upstream.",
   "license": "Apache-2.0",
   "author": "SynthFlux",
   "homepage": "https://github.com/synthflux-ai/synthflux",
@@ -35,20 +35,23 @@
     ".env.example"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:bundle && npm run build:types",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "build:bundle": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --outfile=dist/index.js --minify --banner:js='#!/usr/bin/env node'",
+    "build:types": "tsc --emitDeclarationOnly --declaration"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "zod": "^3.23.0"
   },
   "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.28.1",
     "tsx": "^4.0.0",
-    "typescript": "^5.5.0",
-    "@types/node": "^20.0.0"
+    "typescript": "^5.5.0"
   },
   "engines": {
     "node": ">=18"
