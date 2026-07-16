@@ -1,7 +1,7 @@
 {
   "name": "synthflux",
-  "version": "0.1.0",
-  "description": "OpenAI-compatible media generation MCP server. One baseUrl + apiKey, image / TTS / video across Agnes, StepFun, or your own router backend.",
+  "version": "0.2.0",
+  "description": "OpenAI-compatible media generation MCP server. Connect to SynthFlux gateway (local Go server or remote router). One baseUrl + apiKey, image / TTS / video across Agnes, StepFun, or your own router gateway backend.",
   "author": {
     "name": "SynthFlux",
     "url": "https://github.com/synthflux-ai"
@@ -17,12 +17,14 @@
     "video-generation",
     "media",
     "agnes",
-    "stepfun"
+    "stepfun",
+    "gateway"
   ],
   "mcpServers": "./.codex-plugin/mcp.json",
   "interface": {
     "displayName": "SynthFlux",
     "shortDescription": "OpenAI-compatible media generation (image / TTS / video)",
+    "longDescription": "Connect to a SynthFlux gateway instance (local Go server or remote router). One baseUrl + apiKey, image / TTS / video via OpenAI-compatible protocol. Supports Agnes, StepFun, or your own router gateway backend.",
     "developerName": "SynthFlux",
     "category": "Media"
   }
